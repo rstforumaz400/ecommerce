@@ -1,0 +1,27 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product Image</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+
+        <th>{{product.imageUrl}}</th>
+        <td>{{product.name}}</td>
+        <td>{{product.unitPrice | currency: 'USD'}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+<div>
+    <button class="btn btn-primary" 
+            (click)="checkBalance()"
+    >
+        Check Balance
+    </button>
+</div>
